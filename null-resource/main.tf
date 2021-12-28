@@ -11,5 +11,5 @@ variable "DWARF" {
 }
 
 output "dwarf" {
-  value = var.dwarf
+  value = var.DWARF
 }
