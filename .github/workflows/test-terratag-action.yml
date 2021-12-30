@@ -27,7 +27,8 @@ jobs:
           
       - name: Commit files # transfer the new html files back into the repository
         run: |
-         git config --global user.email "elad.moshe@env0.com"
+          git config --global user.email "elad.moshe@env0.com"
+          git config --global user.name "eladmosh"
           git add ./aws/hello-world
           git commit -m "auto tagging files"
       - name: Push changes # push the output folder to your repo
