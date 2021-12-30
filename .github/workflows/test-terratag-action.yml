@@ -17,7 +17,7 @@ jobs:
 
       - uses: env0/terratag-action@test-action
         env: 
-            ACTIONS_STEP_DEBUG: true
+            ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
           tags: |
             {
