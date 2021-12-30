@@ -9,7 +9,3 @@ variable "DWARF" {
     default = "Oin"
     description = "my little dwarf"
 }
-
-output "dwarf" {
-  value = var.DWARF
-}
