@@ -15,7 +15,7 @@ jobs:
         run: |
             cd null-resource && terraform init
 
-      - uses: env0/terratag-action@test-input
+      - uses: env0/terratag-action@test-action
         with:
           tags: |
             {
