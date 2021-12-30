@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.email "elad.moshe@env0.com"
           git config --global user.name "eladmosh"
-          git add ./aws/hello-world
+          git add ./aws/hello-world/*.tf*
           git commit -m "auto tagging files"
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
