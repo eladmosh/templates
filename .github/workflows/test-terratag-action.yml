@@ -24,3 +24,13 @@ jobs:
               "env0_environment_id":"40907eff-cf7c-419a-8694-e1c6bf1d1168","env0_project_id":"43fd4ff1-8d37-4d9d-ac97-295bd850bf94"
             }
           dir: aws/hello-world
+          
+      - name: Commit files # transfer the new html files back into the repository
+        run: |
+          git add ./aws/hello-world
+          git commit -m "auto tagging files"
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
