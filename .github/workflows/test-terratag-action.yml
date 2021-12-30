@@ -13,7 +13,7 @@ jobs:
           # more setup-terraform configuration. See https://github.com/hashicorp/setup-terraform#usage
       - name: run terraform init
         run: |
-            cd null-resource && terraform init
+            cd aws/hello-world && terraform init
 
       - uses: env0/terratag-action@test-action
         env: 
