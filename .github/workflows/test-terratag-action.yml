@@ -15,7 +15,7 @@ jobs:
         run: |
             cd aws/hello-world && terraform init
 
-      - uses: env0/terratag-action@fix-terratag-action-doesnt-work
+      - uses: env0/terratag-action@main
         env: 
             ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
