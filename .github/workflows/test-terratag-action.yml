@@ -15,7 +15,7 @@ jobs:
         run: |
             cd aws/hello-world && terraform init
 
-      - uses: env0/terratag-action@test-action
+      - uses: env0/terratag-action@fix-terratag-action-doesnt-work
         env: 
             ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
@@ -25,14 +25,14 @@ jobs:
             }
           dir: aws/hello-world
           
-      - name: Commit files # transfer the new html files back into the repository
-        run: |
-          git config --global user.email "elad.moshe@env0.com"
-          git config --global user.name "eladmosh"
-          git add ./aws/hello-world/*.tf*
-          git commit -m "auto tagging files"
-      - name: Push changes # push the output folder to your repo
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
+#       - name: Commit files # transfer the new html files back into the repository
+#         run: |
+#           git config --global user.email "elad.moshe@env0.com"
+#           git config --global user.name "eladmosh"
+#           git add ./aws/hello-world/*.tf*
+#           git commit -m "auto tagging files"
+#       - name: Push changes # push the output folder to your repo
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           force: true
