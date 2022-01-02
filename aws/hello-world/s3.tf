@@ -1,6 +1,6 @@
 provider "random" {}
 
-resource "random_string" "random" {
+resource "random_string" "random2" {
   length = 16
   special = false
   min_lower = 16
