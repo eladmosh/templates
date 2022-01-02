@@ -15,7 +15,7 @@ jobs:
         run: |
             cd aws/hello-world && terraform init
 
-      - uses: env0/terratag-action@test-npm-build
+      - uses: env0/terratag-action@fix-make-terratag-action-work
         env: 
             ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
@@ -24,15 +24,3 @@ jobs:
               "env0_environment_id":"40907eff-cf7c-419a-8694-e1c6bf1d1168","env0_project_id":"43fd4ff1-8d37-4d9d-ac97-295bd850bf94"
             }
           dir: aws/hello-world
-          
-#       - name: Commit files # transfer the new html files back into the repository
-#         run: |
-#           git config --global user.email "elad.moshe@env0.com"
-#           git config --global user.name "eladmosh"
-#           git add ./aws/hello-world/*.tf*
-#           git commit -m "auto tagging files"
-#       - name: Push changes # push the output folder to your repo
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           force: true
