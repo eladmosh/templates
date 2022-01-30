@@ -1,0 +1,15 @@
+version: 1
+
+deploy:
+  steps:
+    terraformPlan:
+      before:
+#        - /opt/tfenv/bin/terraform state rm module.my-cluster.module.eks.module.eks.kubernetes_config_map.aws_auth
+#        - /opt/tfenv/bin/terraform state rm module.my-cluster.module.autoscaler.module.eks-cluster-autoscaler.helm_release.cluster_autoscaler
+        - /opt/tfenv/bin/terraform state rm module.my-cluster.module.csi_driver.kubectl_manifest.csi_service_account
+
+destroy:
+  steps:
+    terraformPlan:
+      before:
+        - /opt/tfenv/bin/terraform state rm module.my-cluster.module.eks.module.eks.kubernetes_config_map.aws_auth
