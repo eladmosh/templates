@@ -4,4 +4,5 @@ module "my-cluster" {
 
   region       = var.region
   cluster_name = var.cluster_name
+  vpc          = var.vpc
 }
