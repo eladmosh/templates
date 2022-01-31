@@ -6,5 +6,6 @@ variable "vpc" {
   default = {
     create = true
     vpc_id = ""
+    private_subnets = []
   }
 }
