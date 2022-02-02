@@ -9,3 +9,10 @@ variable "vpc" {
     private_subnets = []
   }
 }
+variable "eks" {
+  default = {
+    create = true
+    kubernetes_host = ""
+    cluster_id      = ""
+  }
+}
