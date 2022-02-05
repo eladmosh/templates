@@ -16,3 +16,8 @@ variable "eks" {
     cluster_id      = ""
   }
 }
+
+create_autoscaler = {
+  type = bool
+  default = true
+}
