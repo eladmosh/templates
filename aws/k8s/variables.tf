@@ -17,7 +17,7 @@ variable "eks" {
   }
 }
 
-create_autoscaler = {
+variable create_autoscaler = {
   type = bool
   default = true
 }
