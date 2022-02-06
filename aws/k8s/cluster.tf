@@ -8,4 +8,5 @@ module "my-cluster" {
   eks               = var.eks
   efs               = var.efs
   create_autoscaler = var.create_autoscaler
+  create_csi_driver = var.create_csi_driver
 }
