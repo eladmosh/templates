@@ -9,6 +9,7 @@ variable "vpc" {
     private_subnets = []
   }
 }
+
 variable "eks" {
   default = {
     create = true
@@ -16,6 +17,14 @@ variable "eks" {
     cluster_id      = ""
   }
 }
+
+variable "efs" {
+  default = {
+    create = true
+    efs_id = ""
+  }
+}
+
 
 variable "create_autoscaler" {
   type = bool
