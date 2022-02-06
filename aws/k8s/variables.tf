@@ -30,3 +30,8 @@ variable "create_autoscaler" {
   type = bool
   default = true
 }
+
+variable "create_csi_driver" {
+  type = bool
+  default = true
+}
