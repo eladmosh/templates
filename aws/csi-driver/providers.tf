@@ -1,13 +1,19 @@
-terraform {
-  required_version = ">= 1.0.0"
+provider "aws" {
+  region = "us-east-1"
+}
 
-  required_providers {
-    aws        = "~> 3.68.0"
-    kubernetes = "~> 2.7.0"
-    helm       = "~> 2.4.0"
-    kubectl = {
-      source  = "gavinbunney/kubectl"
-      version = ">= 1.7.0"
-    }
+data "aws_eks_cluster" "this" {
+  name = var.cluster_name
+}
+
+data "aws_eks_cluster_auth" "this" {
+  name = var.cluster_name
+}
+
+provider "helm" {
+  kubernetes {
+    host                   = data.aws_eks_cluster.this.endpoint
+    token                  = data.aws_eks_cluster_auth.this.token
+    cluster_ca_certificate = base64decode(data.aws_eks_cluster.this.certificate_authority.0.data)
   }
 }
