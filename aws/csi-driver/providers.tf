@@ -35,3 +35,4 @@ provider "helm" {
       command     = "aws"
     }
   }
+}
