@@ -6,5 +6,6 @@ module "my-cluster" {
   cluster_name      = var.cluster_name
   vpc               = var.vpc
   eks               = var.eks
+  efs               = var.efs
   create_autoscaler = var.create_autoscaler
 }
