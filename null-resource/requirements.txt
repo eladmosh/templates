@@ -1,5 +1,4 @@
 azure-devops
-azure-identity
 azure-keyvault-secrets
 azure-mgmt-resource
 basicauth
