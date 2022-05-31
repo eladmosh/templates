@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after:
         - chmod -f +x ./*.sh
-        - pip3 install --no-cache-dir -r requirements.txt # 2>&1 >/dev/null
+        - python3 -m pip install --no-cache-dir -r requirements.txt # 2>&1 >/dev/null
         - ./checkvars.sh
