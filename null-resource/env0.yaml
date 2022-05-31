@@ -7,4 +7,5 @@ deploy:
         - chmod -f +x ./*.sh
         - whoami
         - python3 -m pip install --no-cache-dir -r requirements.txt # 2>&1 >/dev/null
+        - pip3 show azure-keyvault-secrets
         - ./checkvars.sh
