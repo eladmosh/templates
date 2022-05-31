@@ -1,2 +1,9 @@
-# azure-devops
+azure-devops
+azure-identity
 azure-keyvault-secrets
+azure-mgmt-resource
+basicauth
+jmespath
+jq
+msrest
+requests
