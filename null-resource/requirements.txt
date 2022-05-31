@@ -1,8 +1,1 @@
-azure-devops
 azure-keyvault-secrets
-azure-mgmt-resource
-basicauth
-jmespath
-jq
-msrest
-requests
