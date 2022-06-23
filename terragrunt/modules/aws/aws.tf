@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "full_of_holes" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-tg-cost-estimations-test-bucket"
   acl    = "private"
 
   tags = {
