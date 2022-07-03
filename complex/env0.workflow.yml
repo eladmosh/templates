@@ -1,15 +1,15 @@
 environments:
   first:
     name: first
-    templateName: 'null'
+    templateName: 'null-for-complex-bug'
   second:
     name: second
-    templateName: 'null'
+    templateName: 'null-for-complex-bug'
     needs:
       - first
   third:
     name: three
-    templateName: 'null'
+    templateName: 'null-for-complex-bug'
     needs:
       - second
 
