@@ -1,25 +1,15 @@
 environments:
-  beforeFirst:
-    name: beforeFirst
-    templateName: 'null'
   first:
     name: first
     templateName: 'null'
-    needs:
-      - beforeFirst
   second:
     name: second
     templateName: 'null'
     needs:
-      - beforeFirst
+      - first
   third:
     name: three
     templateName: 'null'
     needs:
-      - first
       - second
-  fourth:
-    name: fourth
-    templateName: 'null'
-    needs:
-      - third
+
