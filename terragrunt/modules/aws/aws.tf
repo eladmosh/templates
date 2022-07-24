@@ -4,11 +4,11 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_s3_bucket" "full_of_holes" {
-  bucket = "my-tg-cost-estimations-test-bucket"
+resource "aws_s3_bucket" "full_of_holes5" {
+  bucket = "my-tg-cost-estimations-test-bucket5"
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My bucket5"
   }
 }
