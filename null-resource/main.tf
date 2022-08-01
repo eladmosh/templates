@@ -1,6 +1,5 @@
 variable "override_special" {
   type = string
-  sensitive   = true
 }
 
 resource "null_resource" "null1" {
