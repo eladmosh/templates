@@ -1,4 +1,4 @@
-variable "override_special" {
+variable "sensitive_var" {
   type = string
 }
 
@@ -11,7 +11,7 @@ resource "null_resource" "null3" {
 resource "random_string" "random" {
   length           = 16
   special          = true
-  override_special = var.override_special
+  override_special = var.sensitive_var
 }
 
 variable "DWARF" {
