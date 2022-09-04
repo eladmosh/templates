@@ -1,6 +1,3 @@
-variable "sensitive_var" {
-  type = string
-}
 
 resource "null_resource" "null1" {
 }
