@@ -2,6 +2,6 @@ version: 1
 
 deploy:
   steps:
-    setupVariables:
-      before:
-        - sleep ${SLEEP_IN_SECONDS:-1800}
+    terraformPlan:
+      after:
+        - elad
