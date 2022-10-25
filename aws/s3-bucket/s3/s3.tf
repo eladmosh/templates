@@ -5,14 +5,14 @@ provider "aws" {
 
 provider "random" {}
 
-resource "random_string" "random" {
+resource "random_string" "random2" {
   length = "16"
   special = "false"
   min_lower = "16"
 }
 
 resource "aws_s3_bucket" "website_bucket2" {
-  bucket = "env0-s3-${random_string.random.result}"
+  bucket = "env0-s3-${random_string.random2.result}"
   acl    = "public-read"
   force_destroy = true
 }
