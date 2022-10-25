@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "website_bucket2" {
 }
 
 resource "aws_s3_bucket_policy" "website_bucket_policy" {
-  bucket = "${aws_s3_bucket.website_bucket.id}"
+  bucket = "${aws_s3_bucket.website_bucket2.id}"
 
   policy = <<POLICY
 {
@@ -31,7 +31,7 @@ resource "aws_s3_bucket_policy" "website_bucket_policy" {
       "Principal": "*",
       "Action": "s3:GetObject",
       "Resource": [
-          "arn:aws:s3:::${aws_s3_bucket.website_bucket.bucket}/*"
+          "arn:aws:s3:::${aws_s3_bucket.website_bucket2.bucket}/*"
       ]
     }
   ]
@@ -40,7 +40,7 @@ POLICY
 }
 
 resource "aws_s3_bucket_object" "object" {
-  bucket = "${aws_s3_bucket.website_bucket.bucket}"
+  bucket = "${aws_s3_bucket.website_bucket2.bucket}"
   key    = "index.html"
   source = "../index.html"
   content_type = "text/html"
