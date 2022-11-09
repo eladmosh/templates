@@ -1,15 +1,9 @@
 environments:
   first:
     name: first
-    templateName: 'null-for-complex-bug'
+    templateName: 'null-resource'
   second:
     name: second
-    templateName: 'null-for-complex-bug'
+    templateName: 'null-resource-fail'
     needs:
       - first
-  third:
-    name: three
-    templateName: 'null-for-complex-bug'
-    needs:
-      - second
-
