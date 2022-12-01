@@ -1,7 +1,7 @@
 environments:
   first:
     name: first
-    templateName: 'null-resourcezzz'
+    templateName: 'null-resource'
   second:
     name: second
     templateName: 'null-resource'
