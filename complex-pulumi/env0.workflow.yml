@@ -1,0 +1,14 @@
+environments:
+  first:
+    name: first
+    templateName: 'bla'
+  second:
+    name: second
+    templateName: 'bla'
+    needs:
+      - first
+  third:
+    name: third
+    templateName: 'bla'
+    needs:
+      - first
