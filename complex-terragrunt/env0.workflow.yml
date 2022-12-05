@@ -1,0 +1,4 @@
+environments:
+  first:
+    name: terragrunt-sub-env
+    templateName: 'tg-null-resource'
