@@ -1,9 +1,9 @@
 environments:
   first:
-    name: first
+    name: first1
     templateName: 'null-resource'
   second:
-    name: second
+    name: second2
     templateName: 'null-resource'
     needs:
       - first
