@@ -2,7 +2,6 @@ environments:
   first:
     name: first
     templateName: 'null-resource'
-    revision: bla
   second:
     name: second
     templateName: 'null-resource'
