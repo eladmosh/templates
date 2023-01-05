@@ -1,0 +1,15 @@
+environments:
+  first:
+    name: first
+    templateName: 'null resource'
+  second:
+    name: second
+    templateName: 'null resource'
+    needs:
+      - first
+  third:
+    name: third
+    templateName: 'null resource'
+    needs:
+      - first
+
